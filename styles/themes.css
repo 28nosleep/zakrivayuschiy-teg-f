@@ -1,3 +1,53 @@
+:root.theme-dark {
+  --bg-color: #000000;
+  --accent-color: #00cc14;
+  --font-variation-settings: 465;
+  --font-variation-bold: 785;
+  --bg-image: repeating-linear-gradient(to right, #000 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #000 2px, transparent 4px),
+    linear-gradient(to bottom, #007f0c, #004306);
+  --content-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  --stroke-color: #000000;
+  --button-text-color: var(--accent-color);
+  --heart-contour-color: var(--accent-color);
+  --sparks-color: #ff0000;
+  --main-body-heart-color: #ff0000;
+}
+
+:root.theme-light {
+  --bg-color: #ffffff;
+  --accent-color: #000000;
+  --font-variation-settings: 400;
+  --font-variation-bold: 780;
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --content-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  --stroke-color: #ffffff;
+  --button-text-color: #ffffff;
+  --heart-contour-color: var(--accent-color);
+  --sparks-color: #ff0000;
+  --main-body-heart-color: #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --accent-color: #00cc14;
+    --font-variation-settings: 465;
+    --font-variation-bold: 785;
+    --bg-image: repeating-linear-gradient(to right, #000 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #000 2px, transparent 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
+    --content-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+    --stroke-color: #000000;
+    --button-text-color: var(--accent-color);
+    --heart-contour-color: var(--accent-color);
+    --sparks-color: #ff0000;
+    --main-body-heart-color: #ff0000;
+  }
+}
+
 /* В этом файле вы опишете значения переменных в разных цветовых схемах.
 Придерживайтесь такого именования классов:
 ✦ theme-dark — класс тёмной темы
