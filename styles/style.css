@@ -26,7 +26,6 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  
 }
 
 .header {
@@ -416,9 +415,7 @@ dialog::backdrop {
   inline-size: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
 }
 
-
 .glitch__men {
-  
   filter: drop-shadow(2px 5px 3px rgba(0, 0, 0, 0.8)) saturate(158%);
 }
 
@@ -439,16 +436,11 @@ dialog::backdrop {
 }
 
 .eyes {
-
   filter: blur(0.5rem) brightness(200%);
-  
 }
 .plane {
-
   filter: brightness(105%);
 }
-
-
 
 @media (width <= 375px) {
   .save__button {
