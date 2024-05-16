@@ -252,6 +252,15 @@
   mix-blend-mode: hard-light;
 }
 
+@supports ((-webkit-text-stroke-width: 1px) and (text-stroke-width: 1px)) {
+  .label {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--stroke-color);
+    text-stroke-width: 1px;
+    text-stroke-color: var(--stroke-color);
+  }
+}
+
 .save__button {
   position: relative;
   display: flex;
@@ -415,31 +424,32 @@ dialog::backdrop {
   inline-size: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
 }
 
-.glitch__men {
-  filter: drop-shadow(2px 5px 3px rgba(0, 0, 0, 0.8)) saturate(158%);
+.card__filter__first-card {
+  filter: grayscale(0.8);
 }
 
-.hands {
-  filter: brightness(110%);
+.card__filter__second-card {
+  filter: saturate(400%);
 }
 
-.oh__no__pic {
-  filter: hue-rotate(-1deg);
+.card__filter__third-card {
+  filter: hue-rotate(-90deg);
 }
 
-.rolling__man {
-  filter: brightness(100%) saturate(100%);
+.card__filter__fourth-card {
+  filter: sepia(100%);
 }
 
-.different__angle {
-  filter: brightness(100%) saturate(60%) hue-rotate(2deg);
+.card__filter__fifth-card {
+  filter: invert(0.7);
 }
 
-.eyes {
+.card__filter__sixth-card {
   filter: blur(0.5rem) brightness(200%);
 }
-.plane {
-  filter: brightness(105%);
+
+.card__filter__seventh-card {
+  filter: hue-rotate(30deg) saturate(200%);
 }
 
 @media (width <= 375px) {
