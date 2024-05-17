@@ -48,6 +48,10 @@
   inline-size: var(--content-size);
 }
 
+.logo-link {
+  margin-block-start: 136px;
+}
+
 .main__title {
   margin-block-start: 136px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
@@ -150,24 +154,23 @@
 .card {
   display: flex;
   flex-direction: column;
+  border: 2px solid var(--accent-color);
   padding-block-end: 25px;
   background-color: var(--bg-color);
-  border: 2px solid var(--accent-color);
 }
 
 .card__name {
+  border-bottom: 2px solid var(--accent-color);
   padding-inline: 10px;
   padding-block: 5px;
   font-size: 18px;
-
-  border-bottom: 2px solid var(--accent-color);
 }
 
 .pic {
   position: relative;
-  inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
 }
 
 img {
@@ -252,8 +255,8 @@ img {
 
 .label__wrapper {
   position: relative;
-  inline-size: 100%;
   border-bottom: 2px solid var(--accent-color);
+  inline-size: 100%;
 }
 
 .label {
@@ -284,18 +287,18 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 8px;
   margin-block-start: 49px;
   margin-block-end: 103px;
   border: 2px solid var(--accent-color);
+  padding-inline: 20px;
+  padding-block: 15px;
   font-family: var(--accent-font);
   font-size: 14px;
+  line-height: 90%;
   background-color: var(--bg-color);
   cursor: pointer;
   max-block-size: 55px;
-  padding-block: 15px;
-  padding-inline: 20px;
-  line-height: 90%;
-  gap: 8px;
 }
 
 .save__button:before {
@@ -461,8 +464,8 @@ dialog::backdrop {
     max-inline-size: 28px;
   }
 
-  .main__title {
-    margin-block-start: 120px;
+  .logo-link {
+    margin-block-start: 118px;
   }
 
   .label {
