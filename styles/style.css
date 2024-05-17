@@ -21,11 +21,19 @@
   align-items: center;
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-variation-settings);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .header {
@@ -44,6 +52,10 @@
   margin-block-start: 136px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-align: center;
+}
+
+.logo-link:focus {
+  outline: none;
 }
 
 .header__title {
@@ -132,7 +144,6 @@
 }
 
 .content__list-item {
-  border: 2px solid var(--accent-color);
   inline-size: var(--content-size);
 }
 
@@ -141,24 +152,30 @@
   flex-direction: column;
   padding-block-end: 25px;
   background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
 }
 
 .card__name {
   padding-inline: 10px;
   padding-block: 5px;
   font-size: 18px;
+
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .pic {
   position: relative;
-  z-index: 0;
-  block-size: var(--content-size);
-  max-inline-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+img {
+  display: block;
 }
 
 .card__paragrath {
-  margin-block-start: 20px;
-
+  margin-block-start: 24px;
   padding-inline: 25px;
   font-size: 18px;
 }
@@ -235,11 +252,13 @@
 
 .label__wrapper {
   position: relative;
+  inline-size: 100%;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .label {
   position: absolute;
-  top: 26px;
+  top: 25px;
   right: 25px;
   z-index: 1;
   color: var(--accent-color);
@@ -264,17 +283,19 @@
 .save__button {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin-block-start: 51px;
+  margin-block-start: 49px;
   margin-block-end: 103px;
   border: 2px solid var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
   background-color: var(--bg-color);
   cursor: pointer;
-  inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
+  max-block-size: 55px;
+  padding-block: 15px;
+  padding-inline: 20px;
+  line-height: 90%;
+  gap: 8px;
 }
 
 .save__button:before {
@@ -294,6 +315,55 @@
   transform: scaleX(1);
 }
 
+.save__button:focus {
+  outline: none;
+}
+
+.save__button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: box-shadow 0.6s ease;
+}
+
+.dialog__button {
+  position: relative;
+  margin-block-start: 30px;
+  border: 2px solid var(--accent-color);
+  padding-inline: 17px;
+  padding-block: 9px;
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
+}
+
+.dialog__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.dialog__button:hover::before {
+  transform: scaleX(1);
+}
+
+.dialog__button:focus {
+  outline: none;
+}
+
+.dialog__button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: box-shadow 0.6s ease;
+}
+
 .button__text {
   position: relative;
   color: var(--button-text-color);
@@ -301,84 +371,13 @@
 }
 
 .button__floppy {
-  margin-block-start: 6px;
   color: var(--button-text-color);
   max-inline-size: 21px;
   mix-blend-mode: difference;
 }
 
-.like-icon .sparks {
-  opacity: 0;
-  fill: var(--main-body-heart-color);
-  transition: fill 0.1s linear;
-}
-
-.like-icon .core {
-  fill: transparent;
-  cursor: pointer;
-}
-
-.like-icon:hover .core {
-  fill: var(--accent-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:not(:hover) .core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon .main-body {
-  fill: transparent;
-  cursor: pointer;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--accent-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:not(:hover) .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .core {
-  fill: var(--main-body-heart-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .main-body {
-  fill: var(--main-body-heart-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--main-body-heart-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--main-body-heart-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--main-body-heart-color);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.is-liked .heart {
-  transform-origin: center center;
-  animation: heartbeat 0.3s ease-in 0.1s 1 normal both;
-}
-
-.is-liked .sparks {
-  animation: sparkAnimation 0.3s ease-in 0.3s 1 normal both;
-}
-
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.6);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog__floppy {
@@ -394,7 +393,6 @@ dialog::backdrop {
   display: flex;
   gap: 20px;
   max-inline-size: 293px;
-  max-block-size: 63px;
 }
 
 .dialog__text {
@@ -456,8 +454,7 @@ dialog::backdrop {
   .save__button {
     flex-direction: column;
     align-items: center;
-    gap: 2px;
-    padding-block-end: 13px;
+    max-block-size: 84px;
   }
 
   .button__floppy {
@@ -466,5 +463,10 @@ dialog::backdrop {
 
   .main__title {
     margin-block-start: 120px;
+  }
+
+  .label {
+    top: 23px;
+    right: 11px;
   }
 }
