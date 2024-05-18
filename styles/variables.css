@@ -2,8 +2,8 @@
 :root {
   --main-font: "Inter", sans-serif;
   --accent-font: "Press Start 2P", fantasy;
-  --font-variation-settings: 400;
-  --font-variation-bold: 780;
+  --default-font-weight: 400;
+  --bold-font-weight: 780;
   --bg-color: #ffffff;
   --accent-color: #000000;
 

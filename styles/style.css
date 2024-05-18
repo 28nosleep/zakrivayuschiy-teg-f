@@ -21,12 +21,13 @@
   align-items: center;
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--font-variation-settings);
+  font-variation-settings: 'wght' var(--default-font-weight);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-attachment: fixed;
 }
 
 .main {
@@ -144,7 +145,7 @@
   display: flex;
   flex-direction: column;
   gap: 51px;
-  margin-block-start: 100px;
+  margin-block-start: 99px;
 }
 
 .content__list-item {
@@ -164,6 +165,7 @@
   padding-inline: 10px;
   padding-block: 5px;
   font-size: 18px;
+  font-variation-settings: 'wght' var(--bold-font-weight);
 }
 
 .pic {
@@ -178,13 +180,12 @@ img {
 }
 
 .card__paragrath {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
   margin-block-start: 24px;
   padding-inline: 25px;
   font-size: 18px;
-}
-
-.place__for-memories {
-  margin-block-start: 27px;
 }
 
 .buttons__wrapper {
@@ -272,6 +273,7 @@ img {
   text-stroke-width: 1px;
   text-stroke-color: var(--stroke-color);
   mix-blend-mode: hard-light;
+  opacity: 0.5;
 }
 
 @supports ((-webkit-text-stroke-width: 1px) and (text-stroke-width: 1px)) {
@@ -390,6 +392,7 @@ dialog::backdrop {
   text-transform: uppercase;
   background-color: var(--bg-color);
   min-inline-size: 341px;
+  margin-block-start: 381px;
 }
 
 .dialog__content {
@@ -410,6 +413,7 @@ dialog::backdrop {
 .floppy__dialog {
   color: var(--accent-color);
   inline-size: 39px;
+  margin-block-start: 8px;
 }
 
 .dialog__button {
@@ -425,31 +429,35 @@ dialog::backdrop {
   inline-size: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
 }
 
-.card__filter__first-card {
+.ok__button {
+  font-size: 14px;
+}
+
+.card__filter__grayscale {
   filter: grayscale(0.8);
 }
 
-.card__filter__second-card {
+.card__filter__saturate {
   filter: saturate(400%);
 }
 
-.card__filter__third-card {
+.card__filter__hue-rotate {
   filter: hue-rotate(-90deg);
 }
 
-.card__filter__fourth-card {
+.card__filter__sepia {
   filter: sepia(100%);
 }
 
-.card__filter__fifth-card {
+.card__filter__invert{
   filter: invert(0.7);
 }
 
-.card__filter__sixth-card {
+.card__filter__blur {
   filter: blur(0.5rem) brightness(200%);
 }
 
-.card__filter__seventh-card {
+.card__filter__saturate__hue {
   filter: hue-rotate(30deg) saturate(200%);
 }
 
