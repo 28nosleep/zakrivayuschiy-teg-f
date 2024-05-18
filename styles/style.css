@@ -21,13 +21,13 @@
   align-items: center;
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--default-font-weight);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
+  background-attachment: fixed;
+  font-variation-settings: "wght" var(--default-font-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-attachment: fixed;
 }
 
 .main {
@@ -165,7 +165,7 @@
   padding-inline: 10px;
   padding-block: 5px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--bold-font-weight);
+  font-variation-settings: "wght" var(--bold-font-weight);
 }
 
 .pic {
@@ -265,6 +265,7 @@ img {
   top: 25px;
   right: 25px;
   z-index: 1;
+  opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
@@ -273,7 +274,6 @@ img {
   text-stroke-width: 1px;
   text-stroke-color: var(--stroke-color);
   mix-blend-mode: hard-light;
-  opacity: 0.5;
 }
 
 @supports ((-webkit-text-stroke-width: 1px) and (text-stroke-width: 1px)) {
@@ -386,13 +386,13 @@ dialog::backdrop {
 }
 
 .dialog__floppy {
+  margin-block-start: 381px;
   border: 2px solid var(--accent-color);
   padding-inline: 30px;
   padding-block: 30px;
   text-transform: uppercase;
   background-color: var(--bg-color);
   min-inline-size: 341px;
-  margin-block-start: 381px;
 }
 
 .dialog__content {
@@ -411,9 +411,9 @@ dialog::backdrop {
 }
 
 .floppy__dialog {
+  margin-block-start: 8px;
   color: var(--accent-color);
   inline-size: 39px;
-  margin-block-start: 8px;
 }
 
 .dialog__button {
@@ -449,7 +449,7 @@ dialog::backdrop {
   filter: sepia(100%);
 }
 
-.card__filter__invert{
+.card__filter__invert {
   filter: invert(0.7);
 }
 
