@@ -480,4 +480,13 @@ dialog::backdrop {
     top: 23px;
     right: 11px;
   }
+
+  .dialog__floppy {
+    margin-block-start: 236px;
+    
+  }
+
+
 }
+
+
